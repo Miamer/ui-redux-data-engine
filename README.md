@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# UI React redux Typescript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+Créer une app de type Dashboard utilisant React redux en Typescript permettant au sein d’un fomulaire de mettre à jour 2 graphiques ainsi qu’un tableau de données.
 
-## Available Scripts
+## Explication
 
-In the project directory, you can run:
+Toutes les données du dashboard font référence à un lieu précis, que l’utilisateur renseigne dans le champs “city” ex : “London, UK” . Le champs “Date” permet d’indiquer une date de référence sur laquelle va être en partie basé les résultats des 2 graphiques.
 
-### `npm start`
+Le **premier graphique** présentera la courbe d’évolution des températures pour la même date sur différentes années. ex: 01/01/2000 - 01/01/2001 - 01/01/2002- …
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+L’utilisateur spécifie la plage des années via la scroll bare horizontale
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Le **deuxième graphique** présentera les températures maximales et minimales jour par jour sur le  mois passé de référence.
 
-### `npm test`
+Enfin nous trouverons un **tableau** des prévisions météo pouvant aller de 3 à 15 jour pour notre lieu de référence.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Réalisation
 
-### `npm run build`
+Ici l’utilisation de redux et plus particulièrement de Reduxtoolkit n’est pas une nécéssité mais plus une démonstration. L’application comporte quelques components,  il n’existe donc pas de problématique de props-drilling.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Nous rechechons à utiliser des fonctionnalités classiques et avancées de redux comme : 
+- le Reducer via createSlice()
+- les RTQ Query
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+L’application disposera de 4 components:
+- Form
+- CurveTemperatureByYear
+- BarTemperatureMinMax
+- ArrayOfForcastWeather
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aucun des components ne passerra de props entre eux, seul le store redux permettra l’echange d’action et d’informations.
 
-### `npm run eject`
+Afin de facilité une présentation rapide Mui sera utilisé.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation du projet
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Installer git si ce n’est pas fait](https://git-scm.com/downloads)
+[Installer node si ce n’est pas déja fait](https://git-scm.com/downloads)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Ouvrir une invite de commande et cloner le répertoire
+    
+    ```bash
+    git clone https://github.com/Miamer/ui-redux-data-engine.git
+    ```
+    
+2. Se rendre dans le répertoire
+    
+    ```bash
+    cd ui-redux-data-engine
+    ```
+    
+3. Installer les dépendances
+    
+    ```bash
+    npm install
+    ```
+    
+4. Insérer votre clé API founis par [www.visualcrossing.com](http://www.visualcrossing.com) dans le fichier .env.distrib :
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```bash
+    REACT_APP_APIKEY=votre_clé_API_ici
+    ```
 
-## Learn More
+## Api
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Les données sont fournis par l’API visualcrossing , [Weather Data & Weather API | Visual Crossing](https://www.visualcrossing.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+La documentation de l’ API est ici  [Timeline Weather API – Visual Crossing Weather](https://www.visualcrossing.com/resources/documentation/weather-api/timeline-weather-api/)
+
+## Librairies et documentations
+
+- Mui : [https://mui.com/](https://mui.com/)
+- React documentation : [https://reactjs.org/](https://reactjs.org/)
+- Redux Toolkit : [https://redux-toolkit.js.org/](https://redux-toolkit.js.org/)
+- Chart.js : [https://www.chartjs.org/docs/latest/]([https://www.chartjs.org/docs/latest/](https://www.chartjs.org/docs/latest/))
+
+## Maquette
+
+<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/4oXZHmftrcbWqrXsdRfuJ2@2Ux7TurymND2vWYmCe8N"></iframe>
