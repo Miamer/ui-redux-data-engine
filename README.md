@@ -72,7 +72,7 @@ La documentation de l’ API est ici [Timeline Weather API – Visual Crossing W
 - Mui : [https://mui.com/](https://mui.com/)
 - React : [https://reactjs.org/](https://reactjs.org/)
 - Redux Toolkit : [https://redux-toolkit.js.org/](https://redux-toolkit.js.org/)
-- Chart.js : [https://www.chartjs.org/docs/latest/]([https://www.chartjs.org/docs/latest/](https://www.chartjs.org/docs/latest/))
+- Chart.js : [https://www.chartjs.org/docs/latest/](https://www.chartjs.org/docs/latest/)
 
 ## Maquette
 
