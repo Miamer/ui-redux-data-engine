@@ -30,11 +30,12 @@ L’application disposera de 4 components:
 
 Aucun des components ne passerra de props entre eux, seul le store redux permettra l’échange d’actions et d’informations.
 
-Afin de faciliter une présentation rapide la librairie Mui sera utilisé.
+Afin de faciliter une présentation rapide la librairie Mui sera utilisée.
 
 ## Installation du projet
 
 [Installer git si ce n’est pas fait](https://git-scm.com/downloads)
+
 [Installer node si ce n’est pas déja fait](https://git-scm.com/downloads)
 
 1. Ouvrir une invite de commande et cloner le répertoire

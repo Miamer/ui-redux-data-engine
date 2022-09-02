@@ -1,58 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
 
-function App() {
+import Form from "./component/Form/Form";
+import CurveTemperatureByYear from "./component/CurveTemperatureByYear/CurveTemperatureByYear";
+import BarTemperatureMinMax from "./component/BarTemperatureMinMax/BarTemperatureMinMax";
+import ArrayOfForcastWeather from "./component/ArrayOfForcastWeather/ArrayOfForcastWeather";
+
+import style from "./App.module.scss";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className={style.App}>
+      <Form />
+      <div className={style.Dashboard}>
+        <div className={style.Graphs}>
+          <CurveTemperatureByYear/>
+          
+          <BarTemperatureMinMax/>
+        </div>
+        <ArrayOfForcastWeather/>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
