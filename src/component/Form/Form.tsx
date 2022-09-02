@@ -24,13 +24,6 @@ import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 
 
-// city: string;
-// dateRef: Date;
-// years: number[];
-// CminDay: boolean;
-// CmaxDay: boolean;
-// rangeForecastWeather: number;
-
 function valuetext(value: number) {
   return `${value}`;
 }
@@ -55,9 +48,6 @@ const CssTextField = styled(TextField)({
     '&.Mui-focused fieldset': {
       borderColor: '#fff',
     },
-    // '&.MuiIconButton':{
-    //   color: '#fff'
-    // }
   },
 });
 

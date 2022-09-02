@@ -1,0 +1,58 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: center;
+  background-color: rgb(104, 115, 115);
+  color: #fff;
+  width: 20%;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 15px;
+  // box-sizing: border-box;
+  // box-sizing: content-box;
+}
+
+.line {
+  border-top: 3px solid #a1a1a1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 75%;
+}
+
+.labelYear {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.blocYearsRange {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.blocForecastWeather {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+}
+
+.labelForecastWeather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+
+
+// .boutonDay{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around
+// }
